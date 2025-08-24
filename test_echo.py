@@ -44,7 +44,7 @@ class TestPostmanEcho:
         response = self.session.get(f"{self.BASE_URL}/get")
         
         # Проверяем статус код
-        assert response.status_code == 200, f"Ожидался статус 200, получен {response.status_code}"
+        assert response.status_code == 202, f"Ожидался статус 200, получен {response.status_code}"
         
         assert response.headers.get('content-type').startswith('application/json'), \
             "Ответ должен быть в JSON формате"
